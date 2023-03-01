@@ -373,7 +373,7 @@
             </ul>
           </div>
         </nav>
-        <div class="container-fluid flex-column pr-3">
+        <div class="container-fluid flex-column wrapper">
           <header class="header">
             <div
               class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3"
@@ -394,25 +394,26 @@
                   >
                   <div class="mail-logo position-relative">
                     <span
-                      class="circle position-absolute top-0 start-100 translate-middle p-1  rounded-circle"
+                      class="circle position-absolute top-0 start-100 translate-middle p-1 rounded-circle"
                     >
                       <span class="visually-hidden">New alerts</span>
                     </span>
                     </div>
                   </button>
                 
-                <button type="button" class="user-block_btn btn-user">
-                  <img src="./img/foto.jpg" />
-                  Максим Добжанский
+                <button type="button" class="user-block_btn btn-user d-flex justify-content-start align-items-center">
+                  <div class="btn-logo_user inline-block overflow-hidden"></div>
+                  <span class="btn-user_text">Максим Добжанский</span>
                 </button>
               </div>
             </div>
           </header>
           <main class="main">
-            <button class="btn btn-green text-white">
-              + создать свой магазин
+            <button class="btn btn-green btn-add btn-edit text-white">
+              <img class="btn-logo" src="./img/cross.svg" />
+              создать свой магазин
             </button>
-            <h4 class=" ">Управление магазинами</h4>
+            <h4 class="title">Управление магазинами</h4>
             <div class="main-wrapper bg-white">
               <table class="table table-shops">
                 <thead>
@@ -429,7 +430,7 @@
                     <td>Дипломная работа</td>
                     <td>http://www.work5.ru/services</td>
                     <td>
-                      <div class="table-actions">
+                      <div class="table-actions d-flex justify-content-between">
                         <button class="btn btn-green btn-edit text-white">
                           <img
                             class="btn-logo"
@@ -454,7 +455,7 @@
                     <td>Дипломная работа</td>
                     <td>http://www.work5.ru/services</td>
                     <td>
-                      <div class="table-actions">
+                      <div class="table-actions d-flex justify-content-between">
                         <button class="btn btn-green btn-edit text-white">
                           <img
                             class="btn-logo"

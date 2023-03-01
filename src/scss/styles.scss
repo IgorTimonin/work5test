@@ -13,6 +13,10 @@ th {
   vertical-align: middle;
 }
 
+col {
+  max-width: 310px;
+}
+
 tbody tr:nth-child(even) {
   border-top: solid 1px rgba(177, 177, 177, 0.35);
 }
@@ -35,6 +39,10 @@ $green-btn: #55C97B;
   font-size: 14px;
   line-height: 21px;
   background-color: #f8faff;
+}
+
+.wrapper {
+  padding: 0 16px 0 60px;
 }
 
 .header {
@@ -126,6 +134,18 @@ $green-btn: #55C97B;
 
   &-logo {
   margin-right: 10px;
+
+  &_user {
+    margin-right: 16px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-image: url(../img/foto.jpg);
+  }
+
+  &_add {
+    margin-right: 12px;
+  }
 }
 
   &-green {
@@ -146,6 +166,13 @@ $green-btn: #55C97B;
     max-width: 256px;
     width: 100%;
     padding: 10px 14px;
+  }
+
+  &-add {
+    height: 36px;
+    max-width: 185px;
+    width: 100%;
+    margin-bottom: 35px;
   }
 }
 
@@ -184,11 +211,17 @@ $green-btn: #55C97B;
   border: 3px solid #FFFFFF;
 }
 
+.title {
+  margin-bottom: 25px;
+}
+
 .table {
   color: #6e6e6e;
   font-weight: 500;
+  max-width: 1000px;
 }
 
 .table-actions {
   max-width: 310px;
+  overflow: hidden;
 }
