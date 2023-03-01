@@ -24,6 +24,9 @@ tbody tr:nth-child(even) {
 //переменные
 $user-btn: 1px solid #D4D4D4;
 $green-btn: #55C97B;
+$color-black: #343434;
+$color-purple: #6666cc;
+$color-grey: #b1b1b1;
 
 .nav {
   --bs-nav-link-color: #7d7d7d;
@@ -83,16 +86,16 @@ $green-btn: #55C97B;
 
 .nav-item {
   &:hover {
-    border-left: #6666cc 4px solid;
-    color: #343434;
+    border-left: $color-purple 4px solid;
+    color: $color-black;
     cursor: pointer;
 
     a {
-      color: #343434;
+      color: $color-black;
     }
 
     svg path {
-      stroke: #6666cc;
+      stroke: $color-purple;
     }
   }
 }
@@ -102,13 +105,13 @@ $green-btn: #55C97B;
 }
 
 .active {
-  border-left: #6666cc 4px solid;
-  color: #343434;
+  border-left: $color-purple 4px solid;
+  color: $color-black;
   a {
-    color: #343434;
+    color: $color-black;
   }
   svg path {
-    stroke: #6666cc;
+    stroke: $color-purple;
   }
 }
 
@@ -156,7 +159,7 @@ $green-btn: #55C97B;
     }
   }
   &-grey {
-    background-color: #b1b1b1;
+    background-color: $color-grey;
     &:hover {
       opacity: 0.8;
     }
@@ -224,4 +227,61 @@ $green-btn: #55C97B;
 .table-actions {
   max-width: 310px;
   overflow: hidden;
+}
+
+// .modal {
+//   padding: 0 20px 0 30px;
+// }
+
+.btn-close {
+  background-image: url(../img/cancel.svg);
+  width: 17px;
+  height: 17px;
+  color: #656565;
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+
+.modal-dialog {
+  max-width: 617px;
+}
+
+.form-select {
+  max-width: 240px;
+}
+
+.input-group {
+  max-width: 568px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+.input-group-text {
+  background-color: $color-purple;
+}
+
+.warning-logo {
+  background-image: url(../img/warning.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 52px;
+  height: 52px;
+  box-sizing: content-box;
+}
+
+.warning-text {
+  max-width: 488px;
+  font-size: 12px;
+}
+
+.info-link {
+  text-decoration: none;
+  color: $color-purple;
 }

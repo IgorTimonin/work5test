@@ -388,20 +388,23 @@
               </div>
 
               <div class="user-block">
-                  <button
-                    type="button"
-                    class="user-block_btn btn-mail d-flex justify-content-center align-items-center"
-                  >
+                <button
+                  type="button"
+                  class="user-block_btn btn-mail d-flex justify-content-center align-items-center"
+                >
                   <div class="mail-logo position-relative">
                     <span
                       class="circle position-absolute top-0 start-100 translate-middle p-1 rounded-circle"
                     >
                       <span class="visually-hidden">New alerts</span>
                     </span>
-                    </div>
-                  </button>
-                
-                <button type="button" class="user-block_btn btn-user d-flex justify-content-start align-items-center">
+                  </div>
+                </button>
+
+                <button
+                  type="button"
+                  class="user-block_btn btn-user d-flex justify-content-start align-items-center"
+                >
                   <div class="btn-logo_user inline-block overflow-hidden"></div>
                   <span class="btn-user_text">Максим Добжанский</span>
                 </button>
@@ -409,11 +412,15 @@
             </div>
           </header>
           <main class="main">
-            <button class="btn btn-green btn-add btn-edit text-white">
+            <button
+              class="btn btn-green btn-add btn-edit text-white"
+              data-bs-toggle="modal"
+              data-bs-target="#createShop"
+            >
               <img class="btn-logo" src="./img/cross.svg" />
               создать свой магазин
             </button>
-            <h4 class="title">Управление магазинами</h4>
+            <h4 class="title fs-20">Управление магазинами</h4>
             <div class="main-wrapper bg-white">
               <table class="table table-shops">
                 <thead>
@@ -479,6 +486,87 @@
               </table>
             </div>
           </main>
+        </div>
+
+        <!-- popup -->
+        <div
+          class="modal fade"
+          id="createShop"
+          tabindex="-1"
+          aria-labelledby="createShopLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-20" id="createShopLabel">
+                  Создать магазин
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close p-0 opacity-100"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="row mb-4 justify-content-between">
+                  <div class="col">
+                    <span>Шаблон</span>
+                    <select class="form-select" aria-label="template">
+                      <option selected>Стандартный</option>
+                      <option value="1">Новый</option>
+                      <option value="2">Расширенный</option>
+                      <option value="3">Кастомный</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <span>Цветовая схема</span>
+                    <select class="form-select" aria-label="colors">
+                      <option selected>Классическая</option>
+                      <option value="1">Яркая</option>
+                      <option value="2">Нейтральная</option>
+                      <option value="3">Авангард</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <span>Домен</span>
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Например: ivangrozniy"
+                      aria-label="domain-name"
+                      aria-describedby="domain"
+                    />
+                    <span class="input-group-text text-white" id="domain">.work5.ru</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="warning-logo"></div>
+                  <div class="warning-text">
+                    В названии домена разрешены латиница и “-”, запрещается
+                    использовать словосочетание Work 5. После создания магазина
+                    Вы сможете прикрутить свой домен (например ivangrozniy.ru).
+                    Подробнее по <a class="info-link" href="#">ссылке</a>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-top-0 justify-content-start">
+                <button
+                  type="button"
+                  class="btn btn-grey text-white fs-14"
+                  data-bs-dismiss="modal"
+                >
+                  Отмена
+                </button>
+                <button type="button" class="btn btn-green text-white fs-14">
+                  Создать
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
