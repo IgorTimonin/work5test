@@ -378,7 +378,7 @@
             <div
               class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3"
             >
-              <div style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+              <div style="--bs-breadcrumb-divider: '❯'" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">Главная</a></li>
                   <li class="breadcrumb-item" aria-current="page">
@@ -422,13 +422,13 @@
             </button>
             <h4 class="title fs-20">Управление магазинами</h4>
             <div class="main-wrapper bg-white">
-              <table class="table table-shops">
+              <table class="table w-100 table-hover table-shops">
                 <thead>
                   <tr>
-                    <th scope="col">№</th>
-                    <th scope="col">Название</th>
-                    <th scope="col">Адрес</th>
-                    <th scope="col">Действие</th>
+                    <th class="" scope="col">№</th>
+                    <th class="" scope="col">Название</th>
+                    <th class="w-40" scope="col">Адрес</th>
+                    <th class="col-w-30 pe-0" scope="col">Действие</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -436,7 +436,7 @@
                     <td scope="row">12345</td>
                     <td>Дипломная работа</td>
                     <td>http://www.work5.ru/services</td>
-                    <td>
+                    <td class="col-w-30 pe-0">
                       <div class="table-actions d-flex justify-content-between">
                         <button class="btn btn-green btn-edit text-white">
                           <img
@@ -458,10 +458,10 @@
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">12345</td>
+                    <td class="col-w-15" scope="row">12345</td>
                     <td>Дипломная работа</td>
                     <td>http://www.work5.ru/services</td>
-                    <td>
+                    <td class="col-w-30 pe-0">
                       <div class="table-actions d-flex justify-content-between">
                         <button class="btn btn-green btn-edit text-white">
                           <img
@@ -498,31 +498,31 @@
         >
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
+              <div class="modal-header pr-20 pl-30 border-0">
                 <h1 class="modal-title fs-20" id="createShopLabel">
                   Создать магазин
                 </h1>
                 <button
                   type="button"
-                  class="btn-close p-0 opacity-100"
+                  class="btn-close p-0 m-0 opacity-100"
                   data-bs-dismiss="modal"
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="modal-body">
+              <div class="modal-body pr-20 pl-30">
                 <div class="row mb-4 justify-content-between">
-                  <div class="col">
-                    <span>Шаблон</span>
-                    <select class="form-select" aria-label="template">
+                  <div class="col pe-5">
+                    <span class="form-label">Шаблон</span>
+                    <select class="form-select mh-36 rounded-1" aria-label="template">
                       <option selected>Стандартный</option>
                       <option value="1">Новый</option>
                       <option value="2">Расширенный</option>
                       <option value="3">Кастомный</option>
                     </select>
                   </div>
-                  <div class="col">
-                    <span>Цветовая схема</span>
-                    <select class="form-select" aria-label="colors">
+                  <div class="col pe-0">
+                    <span class="form-label">Цветовая схема</span>
+                    <select class="form-select mh-36 rounded-1" aria-label="colors">
                       <option selected>Классическая</option>
                       <option value="1">Яркая</option>
                       <option value="2">Нейтральная</option>
@@ -532,15 +532,15 @@
                 </div>
                 <div class="row mb-4">
                   <span>Домен</span>
-                  <div class="input-group">
+                  <div class="input-group pe-0">
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control mh-36 rounded-start-1"
                       placeholder="Например: ivangrozniy"
                       aria-label="domain-name"
                       aria-describedby="domain"
                     />
-                    <span class="input-group-text text-white" id="domain">.work5.ru</span>
+                    <span class="input-group-text text-white justify-content-center mh-36 rounded-end-1" id="domain">.work5.ru</span>
                   </div>
                 </div>
                 <div class="row">
@@ -556,12 +556,12 @@
               <div class="modal-footer border-top-0 justify-content-start">
                 <button
                   type="button"
-                  class="btn btn-grey text-white fs-14"
+                  class="btn btn-grey text-white fs-14 mh-36 px-18"
                   data-bs-dismiss="modal"
                 >
                   Отмена
                 </button>
-                <button type="button" class="btn btn-green text-white fs-14">
+                <button type="button" class="btn btn-green text-white fs-14 mh-36 px-18">
                   Создать
                 </button>
               </div>
