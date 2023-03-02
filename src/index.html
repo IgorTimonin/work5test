@@ -10,7 +10,7 @@
       <div class="d-flex">
         <nav
           id="sidebarMenu"
-          class="col-md-3 col-lg-2 d-md-block bg-white sidebar collapse"
+          class="col-md-3 col-lg-2 d-md-block bg-white sidebar collapse "
         >
           <div class="sidebar-wrapper position-sticky sidebar-sticky">
             <img class="logo" src="./img/Logo.svg" alt="work5 logo" />
@@ -373,8 +373,10 @@
             </ul>
           </div>
         </nav>
-        <div class="container-fluid flex-column wrapper">
-          <header class="header">
+        <div class="container-fluid flex-column wrapper gx-2 gx-sm-4">
+          <header
+            class="header w-100 justify-content-between flex-row flex-nowrap"
+          >
             <div
               class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3"
             >
@@ -408,12 +410,22 @@
                   <div class="btn-logo_user inline-block overflow-hidden"></div>
                   <span class="btn-user_text">Максим Добжанский</span>
                 </button>
+                <button
+                class="navbar-toggler user-block_btn d-md-none collapsed p-3"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#sidebarMenu"
+                aria-controls="sidebarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+              </button>
               </div>
             </div>
           </header>
           <main class="main">
             <button
-              class="btn btn-green btn-add btn-edit text-white"
+              class="btn btn-green btn-add text-white"
               data-bs-toggle="modal"
               data-bs-target="#createShop"
             >
@@ -422,7 +434,7 @@
             </button>
             <h4 class="title fs-20">Управление магазинами</h4>
             <div class="main-wrapper bg-white">
-              <table class="table w-100 table-hover table-shops">
+              <table class="table table-sm table-hover table-shops">
                 <thead>
                   <tr>
                     <th class="" scope="col">№</th>
@@ -433,51 +445,59 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td scope="row">12345</td>
+                    <td class="col-w-15 text-break" scope="row">12345</td>
                     <td>Дипломная работа</td>
-                    <td>http://www.work5.ru/services</td>
+                    <td class="text-break">http://www.work5.ru/services</td>
                     <td class="col-w-30 pe-0">
-                      <div class="table-actions d-flex justify-content-between">
+                      <div
+                        class="table-actions d-flex justify-content-lg-between"
+                      >
                         <button class="btn btn-green btn-edit text-white">
                           <img
                             class="btn-logo"
                             src="./img/pensil.svg"
                             alt="edit-logo"
                           />
-                          Редактировать
+                          <span class="d-none d-lg-inline">Редактировать</span>
                         </button>
-                        <button class="btn btn-grey btn-delete text-white">
+                        <button
+                          class="btn btn-grey btn-edit btn-delete text-white"
+                        >
                           <img
                             class="btn-logo"
                             src="./img/cansel.svg"
                             alt="cancel"
                           />
-                          Редактировать
+                          <span class="d-none d-lg-inline">Редактировать</span>
                         </button>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td class="col-w-15" scope="row">12345</td>
+                    <td class="col-w-15 text-break" scope="row">12345</td>
                     <td>Дипломная работа</td>
-                    <td>http://www.work5.ru/services</td>
+                    <td class="text-break">http://www.work5.ru/services</td>
                     <td class="col-w-30 pe-0">
-                      <div class="table-actions d-flex justify-content-between">
+                      <div
+                        class="table-actions d-flex justify-content-lg-between"
+                      >
                         <button class="btn btn-green btn-edit text-white">
                           <img
                             class="btn-logo"
                             src="./img/pensil.svg"
                             alt="edit"
                           />
-                          Редактировать
+                          <span class="d-none d-lg-inline">Редактировать</span>
                         </button>
-                        <button class="btn btn-grey btn-delete text-white">
+                        <button
+                          class="btn btn-grey btn-edit btn-delete text-white"
+                        >
                           <img
                             class="btn-logo"
                             src="./img/cansel.svg"
                             alt="cancel"
                           />
-                          Редактировать
+                          <span class="d-none d-lg-inline">Редактировать</span>
                         </button>
                       </div>
                     </td>
@@ -511,9 +531,12 @@
               </div>
               <div class="modal-body pr-20 pl-30">
                 <div class="row mb-4 justify-content-between">
-                  <div class="col pe-5">
+                  <div class="col pe-sm-5">
                     <span class="form-label">Шаблон</span>
-                    <select class="form-select mh-36 rounded-1" aria-label="template">
+                    <select
+                      class="form-select mh-36 rounded-1"
+                      aria-label="template"
+                    >
                       <option selected>Стандартный</option>
                       <option value="1">Новый</option>
                       <option value="2">Расширенный</option>
@@ -522,7 +545,10 @@
                   </div>
                   <div class="col pe-0">
                     <span class="form-label">Цветовая схема</span>
-                    <select class="form-select mh-36 rounded-1" aria-label="colors">
+                    <select
+                      class="form-select mh-36 rounded-1"
+                      aria-label="colors"
+                    >
                       <option selected>Классическая</option>
                       <option value="1">Яркая</option>
                       <option value="2">Нейтральная</option>
@@ -540,12 +566,16 @@
                       aria-label="domain-name"
                       aria-describedby="domain"
                     />
-                    <span class="input-group-text text-white justify-content-center mh-36 rounded-end-1" id="domain">.work5.ru</span>
+                    <span
+                      class="input-group-text flex-sm-grow-1 text-white justify-content-center mh-36 rounded-end-1"
+                      id="domain"
+                      >.work5.ru</span
+                    >
                   </div>
                 </div>
-                <div class="row">
-                  <div class="warning-logo"></div>
-                  <div class="warning-text">
+                <div class="row justify-content-evenly align-items-center">
+                  <div class="warning-logo p-0"></div>
+                  <div class="warning-text ps-0">
                     В названии домена разрешены латиница и “-”, запрещается
                     использовать словосочетание Work 5. После создания магазина
                     Вы сможете прикрутить свой домен (например ivangrozniy.ru).
@@ -553,7 +583,9 @@
                   </div>
                 </div>
               </div>
-              <div class="modal-footer border-top-0 justify-content-start">
+              <div
+                class="modal-footer border-top-0 justify-content-start flex-nowrap"
+              >
                 <button
                   type="button"
                   class="btn btn-grey text-white fs-14 mh-36 px-18"
@@ -561,7 +593,10 @@
                 >
                   Отмена
                 </button>
-                <button type="button" class="btn btn-green text-white fs-14 mh-36 px-18">
+                <button
+                  type="button"
+                  class="btn btn-green text-white fs-14 mh-36 px-18"
+                >
                   Создать
                 </button>
               </div>
